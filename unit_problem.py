@@ -14,7 +14,7 @@ NavigationToolbar2Tk)
 
 # The main tkinter window
 window = Tk()
-window.geometry("500x200")
+window.geometry("300x100")
 # setting the title
 window.title('Property Package Validation')
 
@@ -25,10 +25,14 @@ def enthalpy_h():
       fig = plt.figure()
       plot1 = fig.add_subplot(111)
       x = df['T']
-      y_pkg = df['h_pkg']
-      y_CEA = df['h_CEA']
-      plot1.plot(x, y_pkg, marker='o', color='green')
-      plot1.plot(x, y_CEA, color='blue')
+      h_pkg = df['h_pkg']
+      h_CEA = df['h_CEA']
+      plot1.plot(x, h_pkg, marker='o', color='green', label='h_pkg')
+      plot1.plot(x, h_CEA, color='blue', label='h_CEA')
+      plot1.set_title('Enthalpy (h) Validation')
+      plot1.set_xlabel('Temperatture, T [R]')
+      plot1.set_ylabel('Enthalpy, h [BTU/lbm]')
+      plot1.legend()
       plt.show()
 
 
