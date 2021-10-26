@@ -12,7 +12,6 @@ NavigationToolbar2Tk)
 
 
 
-
 # The main tkinter window
 window = Tk()
 window.geometry("500x200")
