@@ -40,10 +40,8 @@ def enthalpy_h():
 def getFile():
       global df
       import_file_path = filedialog.askopenfilename()
-      headers = ['P_val', 'T_val', 'h_val_CEA', 's_val_CEA', 'k_val_CEA', 'mu_val_CEA', 'Cp_val_CEA', 'gam_val_CEA', 'rho_val_CEA', 'R_val_CEA', 'h_val_pkg', 's_val_pkg', 'k_val_pkg', 'mu_val_pkg', 'Cp_val_pkg', 'gam_val_pkg', 'rho_val_pkg', 'R_val_pkg', 'h_val_err', 's_val_err', 'k_val_err', 'mu_val_err', 'Cp_val_err', 'gam_val_err', 'rho_val_err', 'R_val_err', 'outlier_val']
+      headers = ['T_val', 'h_val_CEA', 'h_val_pkg']
       df = pd.read_csv(import_file_path, skiprows=1, usecols=headers, sep=' ')
-      x = df['T_val']
-      print(x)
 
 browseButton = tk.Button(text='Load File...', command=getFile)
 browseButton.grid(row=20, column=0)
