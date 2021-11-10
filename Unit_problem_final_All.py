@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import *
+from tkinter.ttk import *
 from tkinter import filedialog
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
@@ -22,6 +23,47 @@ window.title('Property Package Validation')
 title1 = Label(window, text="Pratt & Whitney")
 title1.grid(row=0,column=0)
 
+
+label = Label(window, text="Enter Folder Name")
+entry = Entry(window)
+label.grid(row=20,column=0)
+entry.grid(row=20,column=1)
+
+def input_value():
+    foldername=entry.get()
+    return foldername
+
+#window.grid_rowconfigure(50, weight=0)
+#window.grid_columnconfigure(0, weight=0)
+label1 = Label(window, text=" ")
+label1.grid(row=50, column=0)
+label2 = Label(window, text=" ")
+label2.grid(row=60, column=0)
+filepath_label = Label(window, text="Output File Path")
+filepath_entry = Entry(window, width=40)
+filepath_label.grid(row=100,column=0)
+filepath_entry.grid(row=100,column=1)
+
+def input_value1():
+    filepath=filepath_entry.get()
+    return filepath
+
+folder_name = []
+output_filepath = []
+def start():
+    folder_name.append(input_value())
+    output_filepath.append(input_value1())
+    global path
+    path = str(output_filepath[0]+'/'+str(folder_name[0]))
+    os.makedirs(path)
+    label = Label(window, text="Select property table file")
+    label.grid(row=20,column=3)
+
+
+start_button = Button(master = window, text = "Start",command = start, style='W.TButton')
+start_button.grid(row=20, column=2)
+
+
 def enthalpy_h():
       fig = plt.figure()
       plot1 = fig.add_subplot(111)
@@ -34,6 +76,7 @@ def enthalpy_h():
       plot1.set_xlabel('Temperature, T [R]')
       plot1.set_ylabel('Enthalpy, h [BTU/lbm]')
       plot1.legend()
+      fig.savefig(path+'/enthalpy_plot.png')
       plt.show()
 def entropy_s():
       fig = plt.figure()
@@ -47,6 +90,7 @@ def entropy_s():
       plot2.set_xlabel('Temperature, T [R]')
       plot2.set_ylabel('Entropy, s [_fill in__]')
       plot2.legend()
+      fig.savefig(path+'/entropy_plot.png')
       plt.show()
 
 def conductivity_k():
@@ -61,6 +105,7 @@ def conductivity_k():
       plot3.set_xlabel('Temperature, T [R]')
       plot3.set_ylabel('Conductivity, k [_fill in__]')
       plot3.legend()
+      fig.savefig(path+'/conductivity_plot.png')
       plt.show()
 
 def SpecHeatRat_gam():
@@ -75,6 +120,7 @@ def SpecHeatRat_gam():
       plot4.set_xlabel('Temperature, T [R]')
       plot4.set_ylabel('Specific Heat Ratio, k [none]')
       plot4.legend()
+      fig.savefig(path+'/SpecHeatRat_gam__plot.png')
       plt.show()
 
 
@@ -90,8 +136,9 @@ def SpecificHeat_Cp():
       plot5.set_xlabel('Temperature, T [R]')
       plot5.set_ylabel('Specific Heat, Cp [Btu/(lbm*R)]')
       plot5.legend()
+      fig.savefig(path+'/SpecificHeat_Cp_plot.png')
       plt.show()
-      
+
 def Viscosity_mu():
       fig = plt.figure()
       plot6 = fig.add_subplot(111)
@@ -104,6 +151,7 @@ def Viscosity_mu():
       plot6.set_xlabel('Temperature, T [R]')
       plot6.set_ylabel('Viscosity, mu [lbm/(ft*sec)]*10^(-5)')
       plot6.legend()
+      fig.savefig(path+'/Viscosity_mu__plot.png')
       plt.show()
 
 def GasConstant_R():
@@ -118,8 +166,9 @@ def GasConstant_R():
       plot7.set_xlabel('Temperature, T [R]')
       plot7.set_ylabel('Gas Constant, R [Btu/(lbm*R)]')
       plot7.legend()
+      fig.savefig(path+'/GasConstant_R_plot.png')
       plt.show()
-      
+
 def Density_rho():
       fig = plt.figure()
       plot8 = fig.add_subplot(111)
@@ -132,6 +181,7 @@ def Density_rho():
       plot8.set_xlabel('Temperature, T [R]')
       plot8.set_ylabel('Density, rho [lbm/(ft^3)')
       plot8.legend()
+      fig.savefig(path+'/Density_rho_plot.png')
       plt.show()
 
 
@@ -144,30 +194,30 @@ def getFile():
       print(x)
 
 browseButton = tk.Button(text='Load File...', command=getFile)
-browseButton.grid(row=20, column=0)
+browseButton.grid(row=20, column=4)
 
-plotButton1 = tk.Button(text='Enthalpy Validation', command=enthalpy_h)
-plotButton1.grid(row=20, column=2)
+plotButton1 = tk.Button(master=window, text='Enthalpy Validation', command=enthalpy_h, height=1, width=22)
+plotButton1.grid(row=40, column=0)
 
-plotButton2 = tk.Button(text='Entropy Validation', command=entropy_s)
-plotButton2.grid(row=20, column=4)
+plotButton2 = tk.Button(text='Entropy Validation', command=entropy_s, height=1, width=22)
+plotButton2.grid(row=40, column=1)
 
-plotButton3 = tk.Button(text='Conductivity Validation', command=conductivity_k)
-plotButton3.grid(row=20, column=6)
+plotButton3 = tk.Button(text='Conductivity Validation', command=conductivity_k, height=1, width=22)
+plotButton3.grid(row=40, column=2)
 
-plotButton4 = tk.Button(text='Specific Heat Ratio Validation', command=SpecHeatRat_gam)
-plotButton4.grid(row=40, column=0)
+plotButton4 = tk.Button(text='Specific Heat Ratio Validation', command=SpecHeatRat_gam, height=1, width=22)
+plotButton4.grid(row=40, column=3)
 
-plotButton5 = tk.Button(text='Specific Heat Validation', command=SpecificHeat_Cp)
-plotButton5.grid(row=40, column=2)
+plotButton5 = tk.Button(text='Specific Heat Validation', command=SpecificHeat_Cp, height=1, width=22)
+plotButton5.grid(row=50, column=0)
 
-plotButton6 = tk.Button(text='Viscosity Validation', command=Viscosity_mu)
-plotButton6.grid(row=40, column=4)
+plotButton6 = tk.Button(text='Viscosity Validation', command=Viscosity_mu, height=1, width=22)
+plotButton6.grid(row=50, column=1)
 
-plotButton7 = tk.Button(text='Gas Constant Validation', command=GasConstant_R)
-plotButton7.grid(row=40, column=6)
+plotButton7 = tk.Button(text='Gas Constant Validation', command=GasConstant_R, height=1, width=22)
+plotButton7.grid(row=50, column=2)
 
-plotButton8 = tk.Button(text='Density Validation', command=Density_rho)
-plotButton8.grid(row=40, column=8)
+plotButton8 = tk.Button(text='Density Validation', command=Density_rho, height=1, width=22)
+plotButton8.grid(row=50, column=3)
 
 window.mainloop()
