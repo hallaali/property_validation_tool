@@ -1,6 +1,6 @@
 # property_validation_package
 
-### **Validation/Visualization Python Scripts**
+### Validation/Visualization Python Scripts
 #### Jet-A Fuel 
 The GitHub contains a directory called "validation_scripts" (https://github.com/hallaali/property_validation_package/tree/main/validation_scripts) within this directory there is a Python script called "Jet_A_validation_tool" which 
 #### Hydrogen 
@@ -14,7 +14,7 @@ The GitHub contains a directory called "validation_scripts" (https://github.com/
 #### Jet-A Fuel
 #### Hydrogen
 
-### **Running the Thermo Rig to Generate Data**
+### **Using the Thermo Rig to Generate Data**
 
 ### **Generating the Python Validation Script for a Selected Fuel**
 
