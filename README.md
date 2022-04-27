@@ -1,4 +1,4 @@
-# property_validation_package
+# property_validation_tool
 
 ## Contents of the GitHub: 
 ### Validation/Visualization Python Scripts
