@@ -1,14 +1,14 @@
 # property_validation_package
 
-### Validation/Visualization Python Scripts
+### **Validation/Visualization Python Scripts**
 #### Jet-A Fuel 
 #### Hydrogen 
 #### Template 
 
-### Data Files
+### **Data Files**
 #### Jet-A Fuel
 #### Hydrogen
 
-### Validation/Visualization Packages
+### **Validation/Visualization Packages**
 #### Jet-A Fuel
 #### Hydrogen
