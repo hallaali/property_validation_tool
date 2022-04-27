@@ -17,7 +17,7 @@ Lastly, the "validation_scripts" (https://github.com/hallaali/property_validatio
 #### Jet-A Fuel
 #### Hydrogen
 
-## Using the Property Validation Package 
+## How to Use the Python-Based Property Validation Tool: 
 
 ### Using the Thermo Rig to Generate Data
 
