@@ -17,7 +17,7 @@ The hydrogen_data directory (https://github.com/hallaali/property_validation_too
 
 ### Validation/Visualization Packages (https://github.com/hallaali/property_validation_tool/tree/main/validation%2Bvisualization_packages)
 #### Jet-A Fuel
-The jetA_validation_package directory (https://github.com/hallaali/property_validation_tool/tree/main/validation%2Bvisualization_packages/jetA_validation%2Bvisualization_packagee) contains folders each named after the .csv data files that contain data for Jet-A fuel properties. Each of these folders contain validation/visualization plots from the corresponding .csv data file.
+The jetA_validation_package directory (https://github.com/hallaali/property_validation_tool/tree/main/validation%2Bvisualization_packages/jetA_validation%2Bvisualization_package) contains folders each named after the .csv data files that contain data for Jet-A fuel properties. Each of these folders contain validation/visualization plots from the corresponding .csv data file.
 #### Hydrogen
 Similarly, the H2_validation_package directory (https://github.com/hallaali/property_validation_tool/tree/main/validation%2Bvisualization_packages/H2_visualization_package) contains folders each named after the .csv data files that contain data for Hydrogen properties. Each of these folders contain visualization plots from the corresponding .csv data file.
 
