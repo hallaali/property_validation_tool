@@ -11,11 +11,15 @@ Lastly, the "validation_scripts" (https://github.com/hallaali/property_validatio
 
 ### Data Files
 #### Jet-A Fuel
+The jetA_data directory (https://github.com/hallaali/property_validation_tool/tree/main/jetA_data) contains the .csv files used to generate the validation/visualization packages for Jet-A fuel with the Jet-A validation Python script. All of the .csv files contained in this folder are called and read by Python in the validation script to plot the data directly from these files. 
 #### Hydrogen
+The hydrogen_data directory (https://github.com/hallaali/property_validation_tool/tree/main/hydrogen_data) contains the .csv files used to generate the visualization packages for Hydrogen with the Hydrogen validation Python script. All of the .csv files contained in this folder are called and read by Python in the validation script to plot the data directly from these files. 
 
 ### Validation/Visualization Packages
 #### Jet-A Fuel
+The jetA_validation_package directory (https://github.com/hallaali/property_validation_tool/tree/main/jetA_validation_package) contains folders each named after the .csv data files that contain data for Jet-A fuel properties. Each of these folders contain validation/visualization plots from the corresponding .csv data file.
 #### Hydrogen
+Similarly, the H2_validation_package directory (https://github.com/hallaali/property_validation_tool/tree/main/H2_validation_package) contains folders each named after the .csv data files that contain data for Hydrogen properties. Each of these folders contain visualization plots from the corresponding .csv data file.
 
 ## How to Use the Python-Based Property Validation Tool: 
 
