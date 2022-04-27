@@ -13,3 +13,9 @@ The GitHub contains a directory called "validation_scripts" (https://github.com/
 ### **Validation/Visualization Packages**
 #### Jet-A Fuel
 #### Hydrogen
+
+### **Running the Thermo Rig to Generate Data**
+
+### **Generating the Python Validation Script for a Selected Fuel**
+
+### **Running the Python Script from the Command Line**
