@@ -1,4 +1,6 @@
 # property_validation_package
 
 ## Contents
-### Validation/Visualizatoin Scripts
+### Validation/Visualization Python Scripts
+### Data Files
+### Validation/Visualization Packages
