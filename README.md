@@ -28,9 +28,17 @@ Similarly, the H2_validation_package directory (https://github.com/hallaali/prop
 ### Generating the Python Validation Script for a Selected Fuel
 In the "validation_scripts" folder there is a Python script that can be utilized as a template to be adjusted for a selected fuel (https://github.com/hallaali/property_validation_tool/blob/main/validation_scripts/validation_tool_(template).py). The areas enclosed in two "!" symbols vary with the selected fuel and should be filled in by the user. The H2 and Jet-A validation scripts can be used as examples. This section will outline all of the areas with "!" symbols and how they should be filled in:
 
-**1.** *line 12* - **!filepath!**: This should be filled in with the filepath of the first .csv file with data for the selected fuel. This data file should be the "validation" portion (containing percent error between pkg and CEA values)
+**1.** *line 12* - **!filepath!**: Enter the filepath of the first .csv file with data for the selected fuel. This data file should be the "validation" portion (containing percent error between pkg and CEA values)
 
-**2.** *line 24* - **!filepath!**: This should be filled in with the filepath of the second .csv file with data for the selected fuel. This data file should be the "visualization" portion (just the thermo properties, no percent error/calculation)
+**2.** *line 24* - **!filepath!**: Enter the filepath of the second .csv file with data for the selected fuel. This data file should be the "visualization" portion (just the thermo properties, no percent error/calculation)
+
+* More files can be added if necessary --> reuse the set of lines 12-18 (for validation) or lines 24-27 (for visualization) and create more dataframes (data3, data4, data5, etc.) *  
+
+**3.** *line 49* - **!filepath!**: Enter the filepath of the folder that will contain the validation/visualization package folder
+
+**4.** *line 59 and line 84*  - **!fuelname!**: Enter the name of the selected fuel (to be displayed on the plot titles)
+
+**5.** *line 96* - 
 
 
 
