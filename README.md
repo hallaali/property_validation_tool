@@ -58,5 +58,12 @@ In the "validation_scripts" folder there is a Python script that can be utilized
 
 **13.** *line 119* - **!foldername!** - Enter the name of the validation package folder - the folder that all of the validation plots **from the selected data file (i.e. the dataframe input in step 10)** will be stored in (in the examples, we named them after the data file names)
 
+When all of these areas are filled in, the script is ready to be run for the selected fuel. 
 
 ### Running the Python Script from the Command Line
+The steps to run the Python validation script from the command line are outlined below:
+1. Ensure that the altered Python validation script for the selected fuel is saved in a folder on your computer
+2. Open the Windows command prompt
+3. Using the "cd" command, change the directory to the path of the folder that the Python validation script is saved in
+4. Use the "python" command followed by the name of the Python validation script to run it (e.g. python H2_validation_tool.py)
+5. Navigate to the folder(s) you set to store the visualization/validation plots (steps 3 and 8 in the previous section) - these folders should now contain a series of visualization/validation plots for the selected fuel
