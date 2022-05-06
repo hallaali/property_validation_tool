@@ -32,13 +32,19 @@ In the "validation_scripts" folder there is a Python script that can be utilized
 
 **2.** *line 24* - **!filepath!**: Enter the filepath of the second .csv file with data for the selected fuel. This data file should be the "visualization" portion (just the thermo properties, no percent error/calculation)
 
-* More files can be added if necessary --> reuse the set of lines 12-18 (for validation) or lines 24-27 (for visualization) and create more dataframes (data3, data4, data5, etc.) *  
+* More files can be added if necessary --> reuse the set of lines 12-18 (for validation) or lines 24-27 (for visualization) and create more dataframes (data3, data4, data5, etc.) 
 
 **3.** *line 49* - **!filepath!**: Enter the filepath of the folder that will contain the validation/visualization package folder
 
 **4.** *line 59 and line 84*  - **!fuelname!**: Enter the name of the selected fuel (to be displayed on the plot titles)
 
-**5.** *line 96* - 
+**5.** *line 96* - **!data!** - Enter the name of the dataframe that contains the data for the visualization portion (e.g. data1)
+
+**6.** *line96* - **!x-parameter!** - Enter the symbol of the parameter that will be the x-parameter of each plot enclosed in single quotation marks and brackets (e.g. ['T'] or ['P'])
+
+**7.** *line 96* - **!foldername!** - Enter the name of the validation package folder - the folder that all of the validation/visualization plots will be stored in
+
+**8.** *
 
 
 
