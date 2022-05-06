@@ -24,6 +24,16 @@ Similarly, the H2_validation_package directory (https://github.com/hallaali/prop
 ## How to Use the Python-Based Property Validation Tool: 
 
 ### Using the Thermo Rig to Generate Data
+Within the ThermoRig software on the local drives, develop input file for desired fuel. ThermoRig will run through NPSS and generate the data used for validation.
+
+1. Open notepad and follow Sample_1.runin as a template.
+2. *line 13* - **switchChemical**: Enter the chemical composition of the desired fuel. 
+3. *line 14* - **switchPkgType**: User input determining if standalone properties of just fuel combustion, or a "fuel to air" and "water to air" mix.
+4. *line 15* - **pkgName**: Enter the name the user wants as the folder name. This makes it simple to identify where the data output is stored.
+5. From line 17 to line 39, the user can input different ranges for the simulation of the fuel in order to determine the data for validation. Follow Sample_1.runin.
+6. *line 42* - **switchCsvOutput**: User needs this on in order to recieve the data in the proper format for the python script. (Note: The other switches cannot be documented at the moment, since we do not have access to enough libraries to run full validation. Hopefully can be updated once submitted.)
+
+When all of these lines are filled in, use the Sample_thermo.bat as a template. Rename line 10 as the name of the input "_______.runin" file. Once this is running, the desired data is ".csv" format will be in the folder named by the user in step 4.
 
 ### Generating the Python Validation Script for a Selected Fuel
 In the "validation_scripts" folder there is a Python script that can be utilized as a template to be adjusted for a selected fuel (https://github.com/hallaali/property_validation_tool/blob/main/validation_scripts/validation_tool_(template).py). The areas enclosed in two "!" symbols vary with the selected fuel and should be filled in by the user. The H2 and Jet-A validation scripts can be used as examples. This section will outline all of the areas with "!" symbols and how they should be filled in:
