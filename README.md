@@ -27,7 +27,7 @@ Similarly, the H2_validation_package directory (https://github.com/hallaali/prop
 
 ### Generating the Python Validation Script for a Selected Fuel
 In the "validation_scripts" folder there is a Python script that can be utilized as a template to be adjusted for a selected fuel (https://github.com/hallaali/property_validation_tool/blob/main/validation_scripts/validation_tool_(template).py). The areas enclosed in two "!" symbols vary with the selected fuel and should be filled in by the user. The H2 and Jet-A validation scripts can be used as examples. This section will outline all of the areas with "!" symbols and how they should be filled in:
-1. line 12 - !filepath! --> this 
+1. *line 12* - **!filepath!**: This should be filled in with the fielpath
 
 
 
