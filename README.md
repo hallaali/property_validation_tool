@@ -32,24 +32,31 @@ In the "validation_scripts" folder there is a Python script that can be utilized
 
 **2.** *line 24* - **!filepath!**: Enter the filepath of the second .csv file with data for the selected fuel. This data file should be the "visualization" portion (just the thermo properties, no percent error/calculation)
 
-* More files can be added if necessary --> reuse the set of lines 12-18 (for validation) or lines 24-27 (for visualization) and create more dataframes (data3, data4, data5, etc.) 
+* More files can be added if necessary --> reuse (i.e. copy and paste below) the set of lines 12-18 (for validation) or lines 24-27 (for visualization) and create more dataframes (data3, data4, data5, etc.) 
 
-**3.** *line 49* - **!filepath!**: Enter the filepath of the folder that will contain the validation/visualization package folder
+**3.** *line 49* - **!filepath!**: Enter the filepath of the folder that will contain the visualization package folder
 
-**4.** *line 59 and line 84*  - **!fuelname!**: Enter the name of the selected fuel (to be displayed on the plot titles)
+**4.** *line 59* and *line 84*  - **!fuelname!**: Enter the name of the selected fuel (to be displayed on the plot titles)
 
 **5.** *line 96* - **!data!** - Enter the name of the dataframe that contains the data for the visualization portion (e.g. data1)
+* More data files can be plotted if necessary --> reuse the set of lines 96-97 (i.e. copy and paste below) and repeat steps 5-7 for that dataframe
 
-**6.** *line96* - **!x-parameter!** - Enter the symbol of the parameter that will be the x-parameter of each plot enclosed in single quotation marks and brackets (e.g. ['T'] or ['P'])
+**6.** *line 96* - **!x-parameter!** - Enter the symbol of the parameter that will be the x-parameter of each plot enclosed in single quotation marks and brackets (e.g. ['T'] or ['P'])
 
-**7.** *line 96* - **!foldername!** - Enter the name of the validation package folder - the folder that all of the validation/visualization plots will be stored in
+**7.** *line 96* - **!foldername!** - Enter the name of the visualization package folder - the folder that all of the visualization plots **from the selected data file (i.e. the dataframe input in step 5)** will be stored in (in the examples, we named them after the data file names)
 
-**8.** *
+**8.** *line 101* - **!filepath!** - Enter the filepath of the folder that will contain the validation package folder
 
+**9.** *line 113*  - **!fuelname!**: Enter the name of the selected fuel (to be displayed on the plot titles)
 
+**10.** *line 119* - **!data!** - Enter the name of the dataframe that contains the data for the validation portion (e.g. data2)
+* More data files can be plotted if necessary --> reuse the set of lines 119-120 (i.e. copy and paste below) and repeat steps 5-7 for that dataframe
 
+**11.** *line 119* - **!x-parameter!** - Enter the symbol of the parameter that will be the x-parameter of each plot enclosed in single quotation marks and brackets (e.g. ['T'] or ['P'])
 
+**12.** *line 119* - **!y-parameter!** - Enter the symbol of the parameter that will be the y-parameter of each plot enclosed in single quotation marks and brackets (e.g. ['T'] or ['P'])
 
+**13.** *line 119* - **!foldername!** - Enter the name of the validation package folder - the folder that all of the validation plots **from the selected data file (i.e. the dataframe input in step 10)** will be stored in (in the examples, we named them after the data file names)
 
 
 ### Running the Python Script from the Command Line
